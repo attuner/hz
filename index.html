@@ -35,7 +35,8 @@ body {
 /* ========================= */
 
 header {
-   background: linear-gradient(135deg, #231649, #402189);
+   background: linear-gradient(120deg, #231649, #402189);
+   
    color: snow;
    padding: 8px;
    text-align: center;
@@ -77,9 +78,9 @@ main {
    flex: 1;
    display: grid;
    grid-template-columns: 1fr 1fr; /* Equal width */
-   gap: 8px;
-   padding: 8px;
-   height: calc(100vh - 150px); /* fills remaining screen */
+   gap: 1px;
+   padding: 4px;
+   height: calc(100vh - 150px); /*fills remaining screen */
 }
 
 /* ========================= */
@@ -90,7 +91,7 @@ fieldset {
    border: none;
    border-radius: 12px;
    background: #ffffff;
-   padding: 8px;
+   padding: 4px;
    display: flex;
    flex-direction: column;
    height: 100%;  /* equal height */
@@ -103,9 +104,9 @@ legend {
    font-weight: bold;
    color: #fff;
    background-color: #402189;
-   padding: 4px 10px;
-   border-radius: 20px;
-   margin-bottom: 10px;
+   padding: 4px 4px;
+   border-radius: 15px;
+   margin-bottom: 4px;
    flex-shrink: 0;
    text-align: center;
 }
@@ -130,6 +131,7 @@ legend {
 .card {
    background-color: #f6f5fa;
    padding: 14px;
+   border: 1px solid #f6f5fa;
    border-radius: 10px;
    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -137,6 +139,11 @@ legend {
 .card:hover {
    transform: translateY(-3px);
    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+   border: 1px solid #402189;
+}
+
+.card a:hover {
+   color: #402189;
 }
 
 .card a {
@@ -149,12 +156,12 @@ legend {
    text-align: center;
    color: #402189;
    margin-bottom: 8px;
-   font-size: 1.05rem;
+   font-size: 1.2rem;
 }
 
 .card a p {
    text-align: justify;
-   font-size: 0.95rem;
+   font-size: 1rem;
 }
 
 .web-notes-iframe {
@@ -162,7 +169,7 @@ legend {
    height: 260px;
    border: none;
    border-radius: 10px;
-   margin-top: 8px;
+   margin-top: 4px;
 }
 
 /* ========================= */
@@ -173,6 +180,7 @@ legend {
    display: flex;
    flex-direction: column;
    height: 100%;
+  
 }
 
 #rss-reader {
@@ -181,7 +189,8 @@ legend {
    display: flex;
    flex-direction: column;
    gap: 12px;
-   padding-right: 6px;
+   padding-right: 2px;
+   
 }
 
 /* RSS Card */
@@ -190,31 +199,39 @@ legend {
    display: grid;
    grid-template-columns: 1fr;
    gap: 12px;
-   padding: 12px;
+   padding: 8px;
    background-color: #f6f5fa;
+   border: 1px solid #f6f5fa;
    border-radius: 10px;
-   transition: box-shadow 0.2s ease;
+   transition: box-shadow 0.2s ease, transform 0.2s ease;
+    margin-top: 3px;
 }
 
 .rss-card:hover {
    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+   color: #402189;
+   border: 1px solid #402189;
+   transform: translateY(-3px);
+   
+    
 }
 
 .rss-image img {
    width: 100%;
-   height: 200px;
+   height: 240px;
    object-fit: cover;
    border-radius: 10px;
    display: block;
 }
 
 .rss-content h2 {
-   font-size: 1rem;
+   font-size: 1.2rem;
    margin-bottom: 6px;
+   text-align: center;
 }
 
 .rss-content p {
-   font-size: 0.92rem;
+   font-size: 1rem;
    text-align: justify;
 }
 
@@ -256,13 +273,16 @@ footer {
    fieldset {
       height: auto;
    }
-
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1025px) {
    .rss-card {
       grid-template-columns: 1fr 2fr;
       align-items: start;
+   }
+
+   main {
+      min-height: 0;
    }
 }
 /* ========================= */
