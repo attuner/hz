@@ -17,310 +17,349 @@ content="The Attuner is a space where ideas find resonance and clarity - a place
 /* RESET */
 /* ========================= */
 
-* {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
-html, body {
-   height: 100%;
+html,body{
+height:100%;
 }
 
-body {
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   color: #333;
-   background-color: #f3f4f8;
-   display: flex;
-   flex-direction: column;
-   overflow: hidden; /* prevents body scroll on desktop */
+body{
+font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+color:#222;
+background:#f3f4f8;
+display:flex;
+flex-direction:column;
+overflow:hidden;
 }
 
 /* ========================= */
 /* HEADER */
 /* ========================= */
 
-header {
-   background: linear-gradient(120deg, #231649, #402189);
-   
-   color: snow;
-   padding: 8px;
-   text-align: center;
-   flex-shrink: 0;
-   
+header{
+background:linear-gradient(120deg,#231649,#402189);
+color:snow;
+padding:8px;
+text-align:center;
+flex-shrink:0;
 }
 
 /* ========================= */
 /* NAVIGATION */
 /* ========================= */
 
-nav {
-   background-color: #402189;
-   padding: 8px;
-   display: flex;
-   justify-content: center;
-   gap: 12px;
-   flex-shrink: 0;
+nav{
+background:#402189;
+padding:8px;
+display:flex;
+justify-content:center;
+gap:12px;
+flex-shrink:0;
 }
 
-nav button {
-   border: 1px solid rgba(255,255,255,0.2);
-   padding: 6px 14px;
-   color: #fff;
-   background: transparent;
-   border-radius: 20px;
-   cursor: pointer;
-   transition: all 0.3s ease;
+nav button{
+border:1px solid rgba(255,255,255,0.2);
+padding:6px 14px;
+color:#fff;
+background:transparent;
+border-radius:20px;
+cursor:pointer;
+transition:.3s;
 }
 
-nav button:hover {
-   background: rgba(255,255,255,0.15);
+nav button:hover{
+background:rgba(255,255,255,0.15);
+}
+
+nav button a{
+color:inherit;
+text-decoration:none;
 }
 
 /* ========================= */
 /* MAIN LAYOUT */
 /* ========================= */
 
-main {
-   flex: 1;
-   display: grid;
-   grid-template-columns: 1fr 1fr; /* Equal width */
-   gap: 1px;
-   padding: 4px;
-   height: calc(100vh - 150px); /*fills remaining screen */
+main{
+display:grid;
+grid-template-columns:1fr 2fr;
+gap:4px;
+padding:4px;
+height:calc(100vh - 150px);
 }
 
 /* ========================= */
-/* FIELDSETS (PANELS) */
+/* PANELS */
 /* ========================= */
 
-fieldset {
-   border: none;
-   border-radius: 12px;
-   background: #ffffff;
-   padding: 4px;
-   display: flex;
-   flex-direction: column;
-   height: 100%;  /* equal height */
-   overflow: hidden; /* prevent panel expansion */
-   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+fieldset{
+border:none;
+border-radius:12px;
+background:#fff;
+padding:4px;
 }
 
-legend {
-   font-size: 1rem;
-   font-weight: bold;
-   color: #fff;
-   background-color: #402189;
-   padding: 4px 4px;
-   border-radius: 15px;
-   margin-bottom: 4px;
-   flex-shrink: 0;
-   text-align: center;
+legend{
+font-size:1rem;
+font-weight:bold;
+color:#fff;
+background:#402189;
+padding:4px;
+border-radius:15px;
+margin-bottom:4px;
+text-align:center;
+flex-shrink:0;
 }
 
 /* ========================= */
-/* LEFT PANEL CONTENT */
+/* LEFT PANEL */
 /* ========================= */
 
-.card-container {
-   flex: 1;
-   overflow-y: auto; /* scroll inside panel */
-   display: flex;
-   flex-direction: column;
-   gap: 14px;
-   padding-right: 6px;
+.card-container{
+flex:1;
+overflow-y:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+padding-right:6px;
 }
 
 /* ========================= */
 /* CARDS */
 /* ========================= */
 
-.card {
-   background-color: #f6f5fa;
-   padding: 14px;
-   border: 1px solid #f6f5fa;
-   border-radius: 10px;
-   transition: transform 0.2s ease, box-shadow 0.2s ease;
+.card,
+.rss-card{
+background:#f6f5fa;
+border:1px solid #402189;
+border-radius:10px;
 }
 
-.card:hover {
-   transform: translateY(-3px);
-   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-   border: 1px solid #402189;
+.card{
+padding:12px;
+transition:transform .2s,box-shadow .2s;
 }
 
-.card a:hover {
-   color: #402189;
+.card:hover{
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+border:1px solid #6124f0;
+color:#402189;
+transition: box-shadow 0.2s ease, transform 0.2s ease;
+
 }
 
-.card a {
-   text-decoration: none;
-   color: #333;
-   display: block;
+.card a{
+text-decoration:none;
+color:#333;
+display:block;
 }
 
-.card a h3 {
-   text-align: center;
-   color: #402189;
-   margin-bottom: 8px;
-   font-size: 1.2rem;
+.card a:hover{
+color:#402189;
 }
 
-.card a p {
-   text-align: justify;
-   font-size: 1rem;
+.card h3{
+text-align:center;
+color:#402189;
+margin-bottom:8px;
+font-size:1.2rem;
 }
 
+.card p{
+text-align:justify;
+font-size:1rem;
+color:#231649;
+}
 
+.card p:hover{
+color:#402189;
+}
 
 /* ========================= */
-/* RIGHT PANEL (RSS) */
+/* RSS PANEL */
 /* ========================= */
 
-.rss-container {
-   display: flex;
-   flex-direction: column;
-   height: 100%;
-  
+.rss-container{
+display:grid;
+grid-template-columns:1fr;
+gap:10px;
+min-height:0;
 }
 
-#rss-reader {
-   flex: 1;
-   overflow-y: auto; /* internal scroll */
-   display: flex;
-   flex-direction: column;
-   gap: 12px;
-   padding-right: 2px;
-   
+#rss-readera,
+#rss-readerb{
+overflow-y:auto;
+min-height:0;
+padding-right:2px;
+margin-bottom:4px;
 }
 
-/* RSS Card */
+/* ========================= */
+/* RSS CARD */
+/* ========================= */
 
-.rss-card {
-   display: grid;
-   grid-template-columns: 1fr;
-   gap: 12px;
-   padding: 8px;
-   background-color: #f6f5fa;
-   border: 1px solid #f6f5fa;
-   border-radius: 10px;
-   transition: box-shadow 0.2s ease, transform 0.2s ease;
-    margin-top: 3px;
+.rss-card{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+padding:12px;
+margin-bottom:8px;
+transition:box-shadow .2s,transform .2s;
+color:#231649;
 }
 
-.rss-card:hover {
-   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-   color: #402189;
-   border: 1px solid #402189;
-   transform: translateY(-3px);
-   
-    
+.rss-card:hover{
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+border:1px solid #6124f0;
+color:#402189;
+transition: box-shadow 0.2s ease, transform 0.2s ease;
+
 }
 
-.rss-image img {
-   width: 100%;
-   height: 240px;
-   object-fit: cover;
-   border-radius: 10px;
-   display: block;
+.rss-card p:hover {
+   color:#402189;
+}
+.rss-image img{
+width:100%;
+height:auto;
+aspect-ratio:initial;
+border-radius:10px;
 }
 
-.rss-content h2 {
-   font-size: 1.2rem;
-   margin-bottom: 6px;
-   text-align: center;
+.rss-content h2{
+font-size:1.2rem;
+margin-bottom:6px;
+text-align:center;
+color:#402189;
 }
 
-.rss-content p {
-   font-size: 1rem;
-   text-align: justify;
+.rss-content p{
+font-size:1rem;
+text-align:justify;
+color:#231649;
 }
 
-/* Hide unused elements */
+/* hide unused rss elements */
 
 .source-badge,
 .read-link,
-.pub-date {
-   display: none;
+.pub-date{
+display:none;
 }
 
 /* ========================= */
 /* FOOTER */
 /* ========================= */
 
-footer {
-   background-color: #402189;
-   padding: 14px;
-   color: snow;
-   text-align: center;
-   flex-shrink: 0;
+footer{
+background:#402189;
+padding:14px;
+color:snow;
+text-align:center;
+flex-shrink:0;
 }
 
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
 
-@media (max-width: 1024px) {
+@media(max-width:480px){
 
-   body {
-      overflow: auto;
-   }
+body{overflow:auto;}
 
-   main {
-      grid-template-columns: 1fr;
-      height: auto;
-   }
-
-   fieldset {
-      height: auto;
-   }
+main{
+grid-template-columns:1fr;
+height:auto;
 }
 
-@media (min-width: 1025px) {
-   .rss-card {
-      grid-template-columns: 1fr 2fr;
-      align-items: start;
-   }
+fieldset{height:auto;}
 
-   main {
-      min-height: 0;
-   }
 }
+
+@media(min-width:481px) and (max-width:960px){
+
+body{overflow:auto;}
+
+main{
+grid-template-columns:1fr 1fr;
+height:100vh;
+}
+
+.rss-container{
+display:block;
+overflow:scroll;
+}
+
+#rss-readera,
+#rss-readerb{
+height:auto;
+overflow:visible;
+}
+
+}
+
+@media(min-width:961px){
+
+body{overflow:hidden;}
+
+main{
+grid-template-columns:1fr 2fr;
+min-height:0;
+}
+
+.rss-container{
+grid-template-columns:1fr 1fr;
+gap:4px;
+height:100%;
+}
+
+#rss-readera,
+#rss-readerb{
+overflow-y:auto;
+height:100%;
+}
+
+}
+
 /* ========================= */
-/* HIDE SCROLLBARS (KEEP SCROLL FUNCTIONAL) */
+/* HIDE SCROLLBARS */
 /* ========================= */
 
-/* Chrome, Edge, Safari */
 .card-container::-webkit-scrollbar,
-#rss-reader::-webkit-scrollbar {
-   display: none;
+#rss-readera::-webkit-scrollbar,
+#rss-readerb::-webkit-scrollbar,
+.rss-container::-webkit-scrollbar{
+display:none;
 }
 
-/* Firefox */
 .card-container,
-#rss-reader {
-   scrollbar-width: none;
+#rss-readera,
+#rss-readerb,
+.rss-container{
+scrollbar-width:none;
+-ms-overflow-style:none;
 }
 
-/* IE (legacy safe) */
-.card-container,
-#rss-reader {
-   -ms-overflow-style: none;
-}
+/* ========================= */
+/* CLOCK */
+/* ========================= */
 
-#live-datetime {
-  
-   top: 8px;
-   left: 12px;
-   font-size: 0.85rem;
-   font-weight: 500;
-   letter-spacing: 0.5px;
-   color: #ffffffcc;
-}
-
-nav button a {
-   color: inherit;
-   text-decoration: none;
+#live-datetime{
+top:8px;
+left:12px;
+font-size:.85rem;
+font-weight:500;
+letter-spacing:.5px;
+color:#ffffffcc;
 }
 </style>
 
@@ -410,13 +449,22 @@ nav button a {
 
             <fieldset class="rss-container">
 
-                  <legend>Our World</legend>
-                  
-                  <script src="multi-rss.js"></script>
+            <legend>Our World</legend>
 
-                  <div id="rss-reader">
-                        <p>Loading articles...</p>
-                  </div>
+               
+               <div id="rss-readera">
+                  <p>Loading articles...</p>
+               </div>
+               <script src="multi-rss-1.js"></script>
+
+               
+               
+               <div id="rss-readerb">
+                  <p>Loading articles...</p>
+               </div>
+               <script src="multi-rss-2.js"></script>
+
+               
 
             </fieldset>
           
